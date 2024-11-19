@@ -1,5 +1,6 @@
 # [OpenAgents: An Open Platform for Language Agents in the Wild](https://arxiv.org/abs/2310.10634)
 
+
  <a href="https://arxiv.org/abs/2310.10634" target="_blank">
     <img alt="OpenAgents Paper" src="https://img.shields.io/badge/📑-OpenAgents_Paper-blue" />
  </a>
@@ -30,6 +31,11 @@
    <a href="https://discord.gg/4Gnw7eTEZR" target="_blank">
       <img alt="Discord" src="https://dcbadge.vercel.app/api/server/4Gnw7eTEZR?compact=true&style=flat" />
    </a>
+
+<div align="center">
+    <a href="https://trendshift.io/repositories/3834" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3834" alt="xlang-ai%2FOpenAgents | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
+
 <div align="center">
     <img src="pics/openagents_overview.png"/>
 </div>
@@ -194,6 +200,11 @@ ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://x.x.x.x:8000
 3. Run the `docker compose build` command in the project root directory.
 4. If you use openai unofficial services, such as [FastChat](https://github.com/lm-sys/FastChat), you need to modify `OPENAI_API_BASE` in [docker-compose.yml](docker-compose.yml#L36);otherwise you only to put your `OPENAI_API_KEY`  in [docker-compose.yml](docker-compose.yml#L36)
 5. After completing the above steps, you can run `docker compose up -d` to start all services.
+
+**Notice**:
+1. If you want to use GPU, you need install [Nvidia Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html),and uncomment the the [docker-compose.yml](docker-compose.yml#L56-L62) Lines 56-62.
+2. Use Auto Plugin will download the weight file from huggingface. In some areas, connection timeout may occur. Please solve the network problem by yourself.
+
 
 
 ## 📜 Tutorial on Extending OpenAgents
